@@ -43,14 +43,6 @@ class SimpleOneHotEncoder(BaseEstimator, TransformerMixin):
 
 
 class FeatureEngineer:
-    def __init__(self):
-        """Input columns ['longitude', 'latitude', 'housing_median_age', 'total_rooms',
-        'total_bedrooms', 'population', 'households', 'median_income', 'median_house_value', 'ocean_proximity']
-
-        Output Columns ['longitude', 'latitude', 'housing_median_age', 'total_rooms',
-         'total_bedrooms', 'population', 'households', 'median_income', 'ocean_proximity']
-        """
-
     def fit(self, df: pd.DataFrame):
         # For categorical values, use a one-hot encoder
         # For numerical values, use a simple imputer & scaler
@@ -63,8 +55,8 @@ class FeatureEngineer:
             'households',
             'median_income'
         ]
-        numeric_idxs = [idx for idx,name in enumerate(df.columns) if name in numeric_cols]
-        category_idxs = [idx for idx,name in enumerate(df.columns) if name in category_cols]
+        numeric_idxs = [idx for idx, name in enumerate(df.columns) if name in numeric_cols]
+        category_idxs = [idx for idx, name in enumerate(df.columns) if name in category_cols]
         p1 = make_pipeline(PositionalSelector(numeric_idxs), SimpleImputer(), StandardScaler())
         p2 = make_pipeline(PositionalSelector(category_idxs), SimpleOneHotEncoder())
         self.features = FeatureUnion([
