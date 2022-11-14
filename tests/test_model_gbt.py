@@ -1,6 +1,6 @@
 import pandas as pd
 
-from models.training import train_gbt
+from models.model_gbt import train_gbt
 
 
 def test_train_gbt(dataset):
