@@ -7,7 +7,7 @@ from models.feature_engineering import FeatureEngineer
 
 def train_gbt(df: pd.DataFrame, feature_cols: List[str], target_col: str):
     xtrain, xtest, ytrain, ytest = train_test_split(df.loc[:, feature_cols],
-                                                    df.loc[:, [target_col]],
+                                                    df.loc[:, target_col],
                                                     test_size=0.20,
                                                     random_state=42)
 
