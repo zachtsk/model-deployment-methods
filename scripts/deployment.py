@@ -33,12 +33,14 @@ spec:
               value: {os.environ['FEATURE_PIPELINE']}
             - name: GBT_MODEL
               value: {os.environ['GBT_MODEL']}
+            - name: NN_MODEL
+              value: {os.environ['NN_MODEL']}
           ports:
             - name: http1
               containerPort: 8080
           resources:
             limits:
-              memory: 512Mi
+              memory: 1024Mi
               cpu: 1000m
   traffic:
     - percent: 100
