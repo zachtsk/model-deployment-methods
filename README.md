@@ -111,7 +111,3 @@ Not surprisingly, the ML Hosting Services performed the best. What is interestin
 
 - First, you're working in an opinionated environment that enforces basic MLOps considerations. You'll learn basic concepts by going through the required steps to deploy your models. For example, how to standardize your model training process, how to handle model versions, and you get ready-made model monitoring & evaluation tools.
 - Second, pure speed. You'll be hard-pressed to out-perform these highly optimized runtime environments.
-
-## TODO
-
-* Link to steps to reproduce results
