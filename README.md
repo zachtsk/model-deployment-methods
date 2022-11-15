@@ -101,7 +101,7 @@ For this test, I measured the response time for each model+deployment combinatio
 
 Not surprisingly, the ML Hosting Services performed the best. What is interesting is that the ML Service Hosted **deep neural net model actually out-performed a simple "hello world" response** from our Flask server.
 
-## So when should I use each?
+## So, which method should you use?
 
 **Cloud Functions:** I feel like these are slowly being phased out in favor of Cloud Container Functions. If you are already familiar with cloud functions, and you prefer to outsource your concerns about where your code is running, this is still a fine solution. The ease of deployment, scalability, and performance should still suffice for most applications.
 
