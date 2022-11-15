@@ -8,10 +8,10 @@ flask:
 	python -m app.api
 
 init:
-	python -m scripts.init
+	python -m scripts.cloud_run_init
 
 service_yaml:
-	python -m scripts.deployment
+	python -m scripts.cloud_run_deployment_config.py
 
 replace_service: service_yaml
 	gcloud run services replace service.yaml --region=$(REGION)
