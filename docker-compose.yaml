@@ -1,0 +1,15 @@
+version: "3"
+services:
+  flask_app:
+    container_name: flask_app
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    env_file:
+      - prod.env
+    ports:
+      - 5000:5000
+    environment:
+      PORT: 5000
+      RUNTIME: prod
+    image: zachtsk/model-deployment-example:1.0
